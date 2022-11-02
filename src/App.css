@@ -18,6 +18,10 @@
   list-style: none;
 }
 
+.single-review-list {
+  list-style: none;
+}
+
 .reviews-title {
   font-size: 40px;
   margin: 2rem;
@@ -56,4 +60,37 @@
 .cat-slug-butt {
   border-radius: 5px;
   padding: 5px;
+}
+
+.single-reviews-title {
+  font-size: 40px;
+  margin: 2rem;
+}
+
+.single-review-card-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.single-review-card-info {
+  margin: auto;
+  max-width: 50%;
+  font-size: 24px;
+  text-align: center;
+}
+
+.review-text {
+  text-align: justify;
+}
+
+.single-review-card {
+  border: 50px brown;
+}
+
+.single-review-card-img {
+  border: 3px solid lightcoral;
+  border-radius: 50px;
+  max-width: 100%;
+  margin: 2rem;
+  width: 30%;
 }
