@@ -1,13 +1,20 @@
 import "./App.css";
 import Header from "./components/Header";
-import Reviews from "./components/Reviews"
+import Home from "./components/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Category from "./components/Category";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Reviews />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="category/:category" element={<Category />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
