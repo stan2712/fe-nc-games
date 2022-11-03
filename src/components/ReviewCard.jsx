@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Voter from "./Voter";
 
 const ReviewCard = ({ review }) => {
   const {
@@ -23,7 +24,7 @@ const ReviewCard = ({ review }) => {
         <img src={review_img_url} className="review-card-img" alt="the game" />
         <div className="review-card-info">
           <p className="review-text">{review_body}</p>
-          <p>Number of likes: {votes}</p>
+          <Voter review={review}/>
           <p>Number of comments: {comment_count}</p>
         </div>
       </li>

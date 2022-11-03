@@ -23,3 +23,11 @@ export function getCategories() {
     return data;
   });
 }
+
+export function patchVotes(review_id, vote) {
+  return api
+    .patch(`/reviews/${review_id}`, { inc_votes: vote })
+    .then(({ data }) => {
+      return data;
+    });
+}
