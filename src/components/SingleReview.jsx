@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getReview } from "../api";
 import Voter from "./Voter"
+import Comments from "./Comments";
 
 const SingleReview = () => {
   const [isLoading, setLoading] = useState(true);
@@ -48,10 +49,11 @@ const SingleReview = () => {
             <div className="single-review-card-info">
               <p>Category: {category}</p>
               <p className="review-text" >{review_body}</p>
-              <p>Writer: {owner}</p>
+              <p>Writer: {owner} on: {new Date(created_at.replace(" ", "T")).toUTCString()}</p>
               <Voter review={singleReview}/>
               <p>Number of comments: {comment_count}</p>
-              <p>Date created; {created_at}</p>
+              <Comments review_id={review_id}/>
+
             </div>
           </li>
         </div>
