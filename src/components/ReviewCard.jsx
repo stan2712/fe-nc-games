@@ -1,17 +1,28 @@
+import { Link } from "react-router-dom";
+
 const ReviewCard = ({ review }) => {
-  const { title, review_body, comment_count, review_img_url, votes, category } =
-    review;
+  const {
+    title,
+    review_body,
+    comment_count,
+    review_img_url,
+    votes,
+    category,
+    review_id,
+  } = review;
 
   return (
     <div className="review-card">
       {" "}
       <li>
-        <div className="review-card-title">
-          Game: {title} - Category: {category}
-        </div>
+        <Link to={`/Reviews/${review_id}`}>
+          <div className="review-card-title">
+            Game: {title} - Category: {category}
+          </div>
+        </Link>
         <img src={review_img_url} className="review-card-img" alt="the game" />
         <div className="review-card-info">
-          <p>Review Body: {review_body}</p>
+          <p className="review-text">{review_body}</p>
           <p>Number of likes: {votes}</p>
           <p>Number of comments: {comment_count}</p>
         </div>
