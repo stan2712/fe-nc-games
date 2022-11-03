@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { getReview } from "../api";
+import Voter from "./Voter"
 
 const SingleReview = () => {
   const [isLoading, setLoading] = useState(true);
@@ -48,7 +49,7 @@ const SingleReview = () => {
               <p>Category: {category}</p>
               <p className="review-text" >{review_body}</p>
               <p>Writer: {owner}</p>
-              <p>Number of likes: {votes}</p>
+              <Voter review={singleReview}/>
               <p>Number of comments: {comment_count}</p>
               <p>Date created; {created_at}</p>
             </div>
