@@ -3,6 +3,8 @@
 .app {
   text-align: center;
   font-family: "Alumni Sans Pinstripe";
+  /* white-space: pre; */
+
   /* display: grid; */
   /* grid-template-columns: auto 320px auto;
   grid-column-start: 1;

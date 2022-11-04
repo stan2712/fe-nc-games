@@ -31,3 +31,9 @@ export function patchVotes(review_id, vote) {
       return data;
     });
 }
+
+export function getComments(review_id) {
+  return api.get(`/reviews/${review_id}/comments`).then(({data})=> {
+    return data
+  })
+}
