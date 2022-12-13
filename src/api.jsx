@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://stan-games.herokuapp.com/api",
+  baseURL: "https://stans-games.cyclic.app/api",
 });
 
 export function getReviews(category) {
